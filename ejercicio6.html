@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TP4 Ejercicio 6 - Javascript - Alumno: Alberto Campagna</title>
+        <div align="center"><h3>TP4 Ejercicio 6 - Javascript: Calculadora - Alumno: Alberto Campagna</h3></div>
+
+    <script>
+        function Calcular(){
+            var Numero1 = parseFloat(document.getElementById("Num1").value)
+            var Numero2 = parseFloat(document.getElementById("Num2").value)
+            var operacion = document.getElementsByName("Operacion")
+            var resultado
+            var valor
+
+            for (var i = 0; i < operacion.length; i++) {
+                if (operacion[i].checked) {
+                    valor = parseFloat(operacion[i].value)
+                }
+            }
+            switch (valor) {
+                case 1:
+                    resultado = Numero1 + Numero2
+                    break
+                case 2:
+                    resultado = Numero1 - Numero2
+                    break
+                case 3:
+                    resultado = Numero1 * Numero2
+                    break
+                case 4:
+                    resultado = Numero1 /  Numero2
+                    break
+            }
+            document.getElementById("Resultado").value = resultado
+        }
+    </script>
+
+</head>
+    <body>
+        <div align="center">
+            <label for="Num1">Ingresar Número: </label>
+                <input type="number" id="Num1" placeholder="0"><br />
+            <label for="Num2">Ingresar Número: </label>
+                <input type="number" id="Num2" placeholder="0"><br />
+
+            <input type="radio" name="Operacion" value="1">Sumar</input><br />
+            <input type="radio" name="Operacion" value="2">Restar</input><br />
+            <input type="radio" name="Operacion" value="3">Multiplicar</input><br />
+            <input type="radio" name="Operacion" value="4">Dividir</input><br />
+
+            <button onclick="Calcular()">Calcular</button><br />
+            <input type="text" id="Resultado" />
+            <br /><br />
+            <a href="index.html">VOLVER AL MENU PRINCIPAL</a>
+        </div>
+    </body>
+</html>

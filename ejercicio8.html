@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TP4 Ejercicio 8 - Javascript - Alumno: Alberto Campagna</title>
+        <h3>TP4 Ejercicio 8 - Javascript: CSS Oculto y Visible - Alumno: Alberto Campagna</h3>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script>
+        function myFunc() {
+            var p1 = document.getElementById("Texto1")
+            var p2 = document.getElementById("Texto2")
+            var boton = document.getElementById("Button")
+            if (p1.className == "visible") {
+                p1.className = "oculto"
+                p2.className = "visible"
+                boton.className = "oculto"
+            }
+        }
+
+    </script>
+    </head>
+        <body>
+        <p class="visible" id="Texto1">Fusce sed orci tellus. Nullam a varius est. Aenean ante mi, accumsan non est id, facilisis bibendum neque. Phasellus ac tempor lorem. Vivamus vel nulla ut mi placerat accumsan sed quis justo. Vivamus ultrices diam lorem, et blandit libero sodales ac. Integer sed pharetra quam, non lobortis velit. Etiam dictum vel eros ut volutpat. Integer dictum eros id ligula placerat, a blandit lacus semper. Fusce hendrerit libero non purus bibendum, a sagittis enim aliquam. In hac habitasse platea dictumst. </p>
+        
+        <p class="oculto" id="Texto2">Sed sollicitudin, sem vitae euismod tempus, nisi mi feugiat diam, vitae placerat lacus odio nec leo. In hendrerit lorem eget ex bibendum, nec ultrices velit bibendum. Vestibulum imperdiet sagittis urna non vulputate. In accumsan nisl fringilla nisl cursus viverra id a dolor. Etiam at sagittis nisi, a bibendum sapien. Nullam molestie ligula a imperdiet interdum. Sed pharetra, lacus vel mollis semper, libero ipsum porttitor massa, ut vulputate urna lacus quis sapien. Aliquam non ipsum vitae ante condimentum blandit. Vestibulum turpis metus, lobortis in ornare non, viverra eu ipsum. Cras gravida tortor sit amet convallis elementum. Donec faucibus vehicula arcu, eu interdum elit scelerisque vel. Nullam vulputate finibus condimentum. </p>
+        
+        <button id="Button" onclick="myFunc()" class="visible">Continuar leyendo...</button>
+
+        <br /><a href="index.html">VOLVER AL MENU PRINCIPAL</a>
+        </body>
+</html>

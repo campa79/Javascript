@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+    	<title>TP4 Ejercicio 5 - Javascript - Alumno: Alberto Campagna</title>
+    	<h3>TP4 Ejercicio 5 - Javascript: Prompt - Alumno: Alberto Campagna</h3>
+
+    <script>
+        var Nombre = prompt("Ingrese su nombre: ")
+        var Apellido = prompt("Ingrese su apellido: ")
+        document.write(MostrarNombreApellido(Nombre, Apellido))
+
+        function MostrarNombreApellido(Nombre, Apellido) {
+            return (Apellido.toUpperCase() + ", " + Nombre.charAt(0).toUpperCase() + Nombre.slice(1).toLowerCase())
+        }
+    </script>
+
+</head>
+	<body>
+		<br /><br />
+		<a href="index.html">VOLVER AL MENU PRINCIPAL</a>
+		<br /><br />
+		<a href="ejercicio5.html">INGRESAR NUEVAMENTE</a>
+	</body>
+</html>

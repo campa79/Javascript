@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TP4 Ejercicio 4 - Javascript - Alumno: Alberto Campagna</title>
+        <h3>TP4 Ejercicio 4 - Javascript: Funcion Mayúsculas y Minúsculas - Alumno: Alberto Campagna</h3>
+
+        <script>
+            var Texto = prompt("Ingrese texto: ")
+            alert(RevisarCadena(Texto))
+
+            function RevisarCadena(Texto)
+                {
+                if (Texto == Texto.toUpperCase())
+                    {
+                    return "El texto contiene todas Mayúsculas."
+                    }
+                else if (Texto == Texto.toLowerCase())
+                    {
+                    return "El texto contiene todas minúsculas."
+                    }
+                else
+                    return "El texto contiene mayúsculas y minúsculas."
+                }
+        </script>
+    </head>
+
+    <body>
+        <a href="index.html">VOLVER AL MENU PRINCIPAL</a>
+    </body>
+</html>

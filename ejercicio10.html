@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <div align="center">
+            <title>TP4 Ejercicio 10 - Javascript - Alumno: Alberto Campagna</title>
+            <h3>TP4 Ejercicio 10 - Javascript: Validaciones con Mensajes de Error - Alumno: Alberto Campagna</h3>
+        </div>
+    <script>
+
+        function myFunc() {
+            var nombre = document.getElementById("username").value
+            var apellido = document.getElementById("lastname").value
+            var dni = document.getElementById("documento").value
+            var sexo = document.getElementById("sex").value
+
+            if (!nombre || nombre.trim() === "") {
+                alert("El campo Nombre no es valido")
+                document.getElementById("username").style.backgroundColor = "red"
+            }
+
+            if (!apellido || apellido.trim() === "") {
+                alert("El campo Apellido no es valido")
+                document.getElementById("lastname").style.backgroundColor = "red"
+            }
+
+            if (!Number(dni)) {
+                alert("El campo DNI tiene que ser numérico.")
+                document.getElementById("documento").style.backgroundColor = "red"
+            }
+
+            if (sexo != ("m" && "f" && "M" && "F" && "Hombre" && "Mujer")) {
+                alert("El campo sexo no es valido. Ingrese: m/f en mayúscula o minúscula. Sino Hombre o Mujer.")
+                document.getElementById("sex").style.backgroundColor = "red"
+            }
+        }
+
+    </script>
+</head>
+<body>
+        <div align="center">
+            <label for="nombre">Nombre:</label>
+            <p><input type="text" id="username" name="nombre"></p>
+            <label for="apellido">Apellido:</label>
+            <p><input type="text" id="lastname" name="apellido"></p>
+            <label for="DNI">DNI:</label>
+            <p><input type="text" id="documento" name="DNI"></p>
+            <label for="sexo">Sexo:</label>
+            <p><input type="text" id="sex" name="sexo"></p>
+            <p><button id="Button" onclick="myFunc()">ENVIAR</button></p>
+
+            <br />
+            <a href="index.html">VOLVER AL MENU PRINCIPAL</a>
+        </div>
+    </body>
+</html>
